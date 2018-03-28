@@ -14,7 +14,4 @@
 @property (nonatomic, strong) NSString *foodDescription;
 @property (nonatomic, strong) NSString *imageName;
 
-- (void) name: (NSString*) parameter1 description:(NSString*) parameter2;
-+ (BOOL) testMethod;
-
 @end

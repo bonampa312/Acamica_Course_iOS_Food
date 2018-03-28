@@ -1,21 +1,22 @@
 //
-//  FoodTableViewCell.m
+//  MyFoodTableViewCell.m
 //  AcamicaCourseApp
 //
 //  Created by Santiago Romero Restrepo on 3/28/18.
 //  Copyright © 2018 Santiago Romero Restrepo. All rights reserved.
 //
 
-#import "FoodTableViewCell.h"
+#import "MyFoodTableViewCell.h"
 
+@interface MyFoodTableViewCell ()
 
-@interface FoodTableViewCell ()
-
+@property (weak, nonatomic) IBOutlet UIImageView *foodImage;
+@property (weak, nonatomic) IBOutlet UILabel *title;
+@property (weak, nonatomic) IBOutlet UILabel *foodDescription;
 
 @end
 
-
-@implementation FoodTableViewCell
+@implementation MyFoodTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -29,9 +30,10 @@
 }
 
 - (void) setTitle:(NSString*) title description:(NSString*) description andImageName:(NSString*) photoName {
-    [self.thisIsATitleLabel setText:title];
-    [self.thisIsADescriptionLabel setText:description];
-    [self.thisIsAPhotoImageView setImage:[UIImage imageNamed:photoName]];
+    [self.title setText:title];
+    [self.foodDescription setText:description];
+    [self.foodImage setImage:[UIImage imageNamed:photoName]];
 }
+
 
 @end

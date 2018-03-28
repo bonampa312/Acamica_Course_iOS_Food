@@ -8,7 +8,7 @@
 
 #import "MenuTableViewController.h"
 #import "Food.h"
-#import "FoodTableViewCell.h"
+#import "MyFoodTableViewCell.h"
 
 @interface MenuTableViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSMutableArray *foods;
@@ -61,11 +61,16 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    FoodTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableViewCellIdentifier" forIndexPath:indexPath];
-    Food *cellFood = [self.foods objectAtIndex:indexPath.item];
-    [cell setTitle:cellFood.name description:cellFood.foodDescription andImageName:cellFood.imageName];
-    
+    MyFoodTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableViewCellIdentifier" forIndexPath:indexPath];
+    Food *foodForCellAtIndex = [self.foods objectAtIndex:indexPath.item];
+    [cell setTitle:foodForCellAtIndex.name description:foodForCellAtIndex.foodDescription andImageName:foodForCellAtIndex.imageName];
     return cell;
+}
+
+#pragma mark - Table view delegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 110;
 }
 
 

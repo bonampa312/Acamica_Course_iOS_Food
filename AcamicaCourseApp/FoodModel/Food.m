@@ -10,12 +10,4 @@
 
 @implementation Food
 
-- (void) name: (NSString*) parameter1 description:(NSString*) parameter2 {
-    NSLog(@"asdasd");
-}
-
-+ (BOOL) testMethod {
-    return true;
-}
-
 @end

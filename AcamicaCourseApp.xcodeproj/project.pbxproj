@@ -14,8 +14,10 @@
 		3CAB4277206A9B9C00B96A8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CAB4275206A9B9C00B96A8D /* LaunchScreen.storyboard */; };
 		3CAB427A206A9B9C00B96A8D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAB4279206A9B9C00B96A8D /* main.m */; };
 		3CAB4282206AA5F100B96A8D /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAB4281206AA5F100B96A8D /* Food.m */; };
-		3CAB4285206BE89700B96A8D /* FoodTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAB4284206BE89700B96A8D /* FoodTableViewCell.m */; };
-		3CAB4288206BECF000B96A8D /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAB4287206BECF000B96A8D /* MenuTableViewController.m */; };
+		3CC33C28206C369700D63C26 /* MyFoodTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC33C27206C369700D63C26 /* MyFoodTableViewCell.m */; };
+		3CC33C35206C4B0A00D63C26 /* MenuCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC33C34206C4B0A00D63C26 /* MenuCollectionViewController.m */; };
+		3CC33C39206C504400D63C26 /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC33C38206C504400D63C26 /* MenuTableViewController.m */; };
+		3CC33C3C206C505D00D63C26 /* MyFoodCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC33C3B206C505D00D63C26 /* MyFoodCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,10 +33,14 @@
 		3CAB4279206A9B9C00B96A8D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3CAB4280206AA5F100B96A8D /* Food.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Food.h; sourceTree = "<group>"; };
 		3CAB4281206AA5F100B96A8D /* Food.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Food.m; sourceTree = "<group>"; };
-		3CAB4283206BE89700B96A8D /* FoodTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoodTableViewCell.h; sourceTree = "<group>"; };
-		3CAB4284206BE89700B96A8D /* FoodTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoodTableViewCell.m; sourceTree = "<group>"; };
-		3CAB4286206BECF000B96A8D /* MenuTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
-		3CAB4287206BECF000B96A8D /* MenuTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
+		3CC33C26206C369700D63C26 /* MyFoodTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFoodTableViewCell.h; sourceTree = "<group>"; };
+		3CC33C27206C369700D63C26 /* MyFoodTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFoodTableViewCell.m; sourceTree = "<group>"; };
+		3CC33C33206C4B0A00D63C26 /* MenuCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuCollectionViewController.h; sourceTree = "<group>"; };
+		3CC33C34206C4B0A00D63C26 /* MenuCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuCollectionViewController.m; sourceTree = "<group>"; };
+		3CC33C37206C504400D63C26 /* MenuTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
+		3CC33C38206C504400D63C26 /* MenuTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
+		3CC33C3A206C505D00D63C26 /* MyFoodCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFoodCollectionViewCell.h; sourceTree = "<group>"; };
+		3CC33C3B206C505D00D63C26 /* MyFoodCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFoodCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,23 +73,51 @@
 		3CAB4269206A9B9C00B96A8D /* AcamicaCourseApp */ = {
 			isa = PBXGroup;
 			children = (
+				3CC33C36206C4B6200D63C26 /* FoodModel */,
+				3CC33C32206C4AED00D63C26 /* CollectionView */,
+				3CC33C29206C446F00D63C26 /* TableView */,
 				3CAB426A206A9B9C00B96A8D /* AppDelegate.h */,
 				3CAB426B206A9B9C00B96A8D /* AppDelegate.m */,
 				3CAB426D206A9B9C00B96A8D /* ViewController.h */,
 				3CAB426E206A9B9C00B96A8D /* ViewController.m */,
 				3CAB4270206A9B9C00B96A8D /* Main.storyboard */,
-				3CAB4280206AA5F100B96A8D /* Food.h */,
-				3CAB4281206AA5F100B96A8D /* Food.m */,
 				3CAB4273206A9B9C00B96A8D /* Assets.xcassets */,
 				3CAB4275206A9B9C00B96A8D /* LaunchScreen.storyboard */,
 				3CAB4278206A9B9C00B96A8D /* Info.plist */,
 				3CAB4279206A9B9C00B96A8D /* main.m */,
-				3CAB4283206BE89700B96A8D /* FoodTableViewCell.h */,
-				3CAB4284206BE89700B96A8D /* FoodTableViewCell.m */,
-				3CAB4286206BECF000B96A8D /* MenuTableViewController.h */,
-				3CAB4287206BECF000B96A8D /* MenuTableViewController.m */,
 			);
 			path = AcamicaCourseApp;
+			sourceTree = "<group>";
+		};
+		3CC33C29206C446F00D63C26 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				3CC33C26206C369700D63C26 /* MyFoodTableViewCell.h */,
+				3CC33C27206C369700D63C26 /* MyFoodTableViewCell.m */,
+				3CC33C37206C504400D63C26 /* MenuTableViewController.h */,
+				3CC33C38206C504400D63C26 /* MenuTableViewController.m */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		3CC33C32206C4AED00D63C26 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				3CC33C33206C4B0A00D63C26 /* MenuCollectionViewController.h */,
+				3CC33C34206C4B0A00D63C26 /* MenuCollectionViewController.m */,
+				3CC33C3A206C505D00D63C26 /* MyFoodCollectionViewCell.h */,
+				3CC33C3B206C505D00D63C26 /* MyFoodCollectionViewCell.m */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		3CC33C36206C4B6200D63C26 /* FoodModel */ = {
+			isa = PBXGroup;
+			children = (
+				3CAB4280206AA5F100B96A8D /* Food.h */,
+				3CAB4281206AA5F100B96A8D /* Food.m */,
+			);
+			path = FoodModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,12 +191,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CC33C39206C504400D63C26 /* MenuTableViewController.m in Sources */,
 				3CAB426F206A9B9C00B96A8D /* ViewController.m in Sources */,
+				3CC33C3C206C505D00D63C26 /* MyFoodCollectionViewCell.m in Sources */,
 				3CAB4282206AA5F100B96A8D /* Food.m in Sources */,
 				3CAB427A206A9B9C00B96A8D /* main.m in Sources */,
+				3CC33C35206C4B0A00D63C26 /* MenuCollectionViewController.m in Sources */,
+				3CC33C28206C369700D63C26 /* MyFoodTableViewCell.m in Sources */,
 				3CAB426C206A9B9C00B96A8D /* AppDelegate.m in Sources */,
-				3CAB4288206BECF000B96A8D /* MenuTableViewController.m in Sources */,
-				3CAB4285206BE89700B96A8D /* FoodTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
