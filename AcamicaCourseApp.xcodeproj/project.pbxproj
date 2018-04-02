@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C75EFB320727F5900278A74 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C75EFB220727F5900278A74 /* QuartzCore.framework */; };
 		3CAB426C206A9B9C00B96A8D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAB426B206A9B9C00B96A8D /* AppDelegate.m */; };
 		3CAB426F206A9B9C00B96A8D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAB426E206A9B9C00B96A8D /* ViewController.m */; };
 		3CAB4272206A9B9C00B96A8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CAB4270206A9B9C00B96A8D /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C75EFB220727F5900278A74 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3CAB4267206A9B9C00B96A8D /* AcamicaCourseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcamicaCourseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CAB426A206A9B9C00B96A8D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3CAB426B206A9B9C00B96A8D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -48,17 +50,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C75EFB320727F5900278A74 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C75EFB120727F5800278A74 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C75EFB220727F5900278A74 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3CAB425E206A9B9C00B96A8D = {
 			isa = PBXGroup;
 			children = (
 				3CAB4269206A9B9C00B96A8D /* AcamicaCourseApp */,
 				3CAB4268206A9B9C00B96A8D /* Products */,
+				3C75EFB120727F5800278A74 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

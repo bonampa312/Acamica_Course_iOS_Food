@@ -14,17 +14,22 @@
         <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eUo-lv-hth">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eUo-lv-hth">
                                 <rect key="frame" x="25" y="40" width="325" height="200"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="xIb-oP-8dP"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="io3-El-Gwx" appends="YES" id="w43-cj-z6e"/>
+                                </connections>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ca-C1-wVc">
                                 <rect key="frame" x="20" y="255" width="335" height="30"/>
@@ -34,28 +39,55 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Wqq-w5-Bhv"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Vk-Zc-Tjy">
-                                <rect key="frame" x="164" y="293" width="46" height="30"/>
+                                <rect key="frame" x="150" y="293" width="75" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Show Alert">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="onTestMethod:" destination="BYZ-38-t0r" eventType="touchUpInside" id="agL-xd-xIV"/>
+                                    <action selector="showAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="imw-J5-P0Q"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R1C-uL-aoq">
+                                <rect key="frame" x="67.5" y="339" width="240" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="KyA-uA-woQ"/>
+                                    <constraint firstAttribute="width" constant="240" id="TzW-kQ-9CQ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfU-jE-Kp3">
+                                <rect key="frame" x="124" y="494" width="127" height="30"/>
+                                <color key="backgroundColor" red="0.7456178617" green="0.7456178617" blue="0.7456178617" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Animate that thing">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="animateView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cgR-bR-QUL"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.17562222431248628" green="0.15874139292702005" blue="0.40698366116751272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="eUo-lv-hth" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="0iS-Yo-ZKB"/>
+                            <constraint firstItem="PfU-jE-Kp3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3vp-of-9lM"/>
                             <constraint firstItem="eUo-lv-hth" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="9TX-a3-K2Y"/>
                             <constraint firstItem="5Vk-Zc-Tjy" firstAttribute="top" secondItem="3ca-C1-wVc" secondAttribute="bottom" constant="8" id="CGN-FA-RfR"/>
                             <constraint firstItem="5Vk-Zc-Tjy" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CQd-fg-bFI"/>
                             <constraint firstItem="3ca-C1-wVc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DVk-uG-SZQ"/>
                             <constraint firstItem="3ca-C1-wVc" firstAttribute="top" secondItem="eUo-lv-hth" secondAttribute="bottom" constant="15" id="OBa-SB-i4P"/>
+                            <constraint firstItem="R1C-uL-aoq" firstAttribute="top" secondItem="5Vk-Zc-Tjy" secondAttribute="bottom" constant="16" id="Rj8-Ha-aRj"/>
+                            <constraint firstItem="R1C-uL-aoq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="i6U-4d-etv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eUo-lv-hth" secondAttribute="trailing" constant="25" id="orS-rH-X9y"/>
+                            <constraint firstItem="PfU-jE-Kp3" firstAttribute="top" secondItem="R1C-uL-aoq" secondAttribute="bottom" constant="35" id="slg-Wm-TE9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3ca-C1-wVc" secondAttribute="trailing" constant="20" id="x2h-64-aSZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -64,9 +96,17 @@
                     <connections>
                         <outlet property="imageView" destination="eUo-lv-hth" id="Ali-hw-CqP"/>
                         <outlet property="textField" destination="3ca-C1-wVc" id="J46-Sl-qQ0"/>
+                        <outlet property="viewHeightConstraint" destination="KyA-uA-woQ" id="PaU-26-QEi"/>
+                        <outlet property="viewToAnimate" destination="R1C-uL-aoq" id="Jvu-bd-0uH"/>
+                        <outlet property="viewWidthConstraint" destination="TzW-kQ-9CQ" id="dJ7-gg-sEH"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="io3-El-Gwx">
+                    <connections>
+                        <action selector="onTestMethod:" destination="BYZ-38-t0r" id="KJd-lu-PKi"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="qvP-Pz-7Xu"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="364" y="30.134932533733135"/>
         </scene>
